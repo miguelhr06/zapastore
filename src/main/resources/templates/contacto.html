@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - ZapaStore</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales (mismos que productos) -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            background: #f2f4f7;
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            background: #111418;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #dcdcdc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        header nav ul li a:hover {
+            color: white;
+        }
+
+        .btn-logout {
+            color: #ff4f4f;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Contenedor */
+        .container {
+            width: 85%;
+            margin: auto;
+            padding-top: 40px;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        h2, h3 {
+            font-weight: 900;
+            color: #111418;
+        }
+
+        .faq-item {
+            margin-bottom: 12px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">👟 ZapaStore</div>
+
+    <nav>
+        <ul>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/perfil">Mi Perfil</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/inicio">Inicio</a></li>
+
+            <li><a class="btn-logout" href="/logout">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <a href="/checkout" style="color:white; font-size:22px;">🛒</a>
+</header>
+
+<div class="container">
+
+    <h2>Centro de Ayuda y Soporte ZapaStore</h2>
+    <p>Encuentra respuestas rápidas o contáctanos para resolver tus dudas sobre pedidos, envíos y tallas.</p>
+
+    <!-- --- CONTACTO DIRECTO --- -->
+    <div class="card">
+        <h3>Opciones de Contacto Directo</h3>
+
+        <p><strong>📧 Correo Electrónico:</strong> soporte@zapastore.com<br>Tiempo de respuesta: menos de 24 horas.</p>
+
+        <p><strong>📞 Teléfono:</strong> +51 987 654 321<br>Disponible de Lunes a Viernes (9:00 - 18:00).</p>
+
+        <p><strong>📍 Ubicación:</strong> Av. Siempre Viva 123, Oficina Principal.</p>
+    </div>
+
+    <!-- --- FAQ --- -->
+    <div class="card">
+        <h3>Preguntas Frecuentes</h3>
+
+        <div class="faq-item">
+            <strong>¿Cuánto tarda en llegar mi pedido?</strong><br>
+            Generalmente los pedidos se procesan en 24 horas y el envío demora entre **2 a 5 días hábiles**.
+        </div>
+
+        <div class="faq-item">
+            <strong>¿Cómo puedo solicitar una devolución o cambio?</strong><br>
+            Puedes solicitar cambios dentro de los primeros 7 días presentando tu boleta electrónica.
+        </div>
+
+        <div class="faq-item">
+            <strong>¿Qué métodos de pago aceptan?</strong><br>
+            Aceptamos: Yape, Plin, Tarjeta de Crédito/Débito.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
